@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Web Component PWA App Shell Example</title>
-    <link rel="stylesheet" media="all" href="css/main.css"/>
+    <link rel="stylesheet" media="all" href="/css/main.css"/>
   </head>
   <body>
     <ul>
@@ -37,14 +37,15 @@
       <app-route path="*" import="/pages/not-found-page.html" template></app-route>
     </app-router>
     <footer>Footer: PWA Appshell demo with native web components</footer>
-    <script src="scripts/shadow-render.js"></script>
-    <script src="scripts/router.js"></script>
-    <script src="scripts/ps-anchor.js"></script>
+    <script src="/scripts/shadow-render.js"></script>
+    <script src="/scripts/router.js"></script>
+    <script src="/scripts/ps-anchor.js"></script>
     <script>
       function route(val, options) {
         document.querySelector('app-router').go(val, options);
         return false;
       }
+      route(window.location.pathname);
     </script>
   </body>
 </html>

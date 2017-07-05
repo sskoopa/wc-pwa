@@ -1,0 +1,25 @@
+{
+  "name": "wc-pwa",
+  "version": "1.0.0",
+  "description": "Build-less web component based PWA App Shell with router example, works in Chrome",
+  "main": "index.js",
+  "dependencies": {
+    "compression": "^1.6.2",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sskoopa/wc-pwa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sskoopa/wc-pwa/issues"
+  },
+  "homepage": "https://github.com/sskoopa/wc-pwa#readme"
+}
