@@ -7,6 +7,7 @@
   <body>
     <ul>
       <li>
+        <!-- simplest possible <a> tag for the app-router -->
         <a href="/" onclick="return route('/');">Home</a>
       </li>
       <li>
@@ -16,6 +17,7 @@
         <a href="/products/foo" onclick="return route('/products/foo');">Products: Foo</a>
       </li>
       <li>
+        <!-- web component attempt for link component for app-router, still not working -->
         <pushstate-anchor href="/products/bar">products/bar</pushstate-anchor>
       </li>
       <li>
@@ -37,14 +39,16 @@
       <app-route path="*" import="/pages/not-found-page.html" template></app-route>
     </app-router>
     <footer>Footer: PWA Appshell demo with native web components</footer>
-    <script src="/scripts/shadow-render.js"></script>
-    <script src="/scripts/router.js"></script>
-    <script src="/scripts/ps-anchor.js"></script>
+    <script src="/scripts/shadow-render.js"></script><!-- the shadow dom render shim -->
+    <script src="/scripts/router.js"></script><!-- the app-router and app-route component definitions -->
+    <script src="/scripts/ps-anchor.js"></script><!-- the ps-anchor web component definition -->
     <script>
+      //simple global route() helper function
       function route(val, options) {
         document.querySelector('app-router').go(val, options);
         return false;
       }
+      //make sure the pushstate is set up correctly, and the correct page is rendered if this page was served on a different route
       route(window.location.pathname);
     </script>
   </body>
